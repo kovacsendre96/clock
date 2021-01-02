@@ -1,83 +1,87 @@
+
+
+
+
+
+
+
 var currentdate = new Date(); 
-let minutes=currentdate.getMinutes();
-let hours=currentdate.getHours();
-let seconds= currentdate.getSeconds();
+let seconds= currentdate.getSeconds()*6;
+let minutes=currentdate.getMinutes()*6;
+let hours=(currentdate.getHours()*30)+(0.2*minutes-30);
 
+var secondStart = {'transform': 'translateX(100%)'+'rotate('+seconds+'deg)'};
 
-
-var secondStart = {'transform': 'rotate('+seconds*6+'deg)'};
             
                     
 $(".clock__second").css(secondStart)
 
-var minuteStart = {'transform': 'rotate('+minutes*6+'deg)'};
+var minuteStart = {'transform': 'rotate('+minutes+'deg)'};
+
             
                     
 $(".clock__minute").css(minuteStart)
 
 
-var hourStart = {'transform': 'rotate('+hours*30+'deg)'};
+var hourStart = {'transform': 'translateX(-100%)'+'rotate('+hours+'deg)'};
             
                     
 $(".clock__hour").css(hourStart)
 
+
+
+setInterval (function(){ 
+
+
+
+
+
+
+seconds+=6
+minutes+=0.1
+hours+=0.01
+
+console.log(seconds)
+console.log(minutes)
 console.log(hours)
+
+var secondStart = {'transform': 'translateX(100%)'+'rotate('+seconds+'deg)'};
+
+            
+                    
+$(".clock__second").css(secondStart)
+
+var minuteStart = {'transform': 'rotate('+minutes+'deg)'};
+
+            
+                    
+$(".clock__minute").css(minuteStart)
+
+
+var hourStart = {'transform': 'translateX(-100%)'+'rotate('+hours+'deg)'};
+            
+                    
+$(".clock__hour").css(hourStart)
+
+
 
 
 
 
           
-setInterval (function(){ 
+
  
                      
-    var currentdate = new Date(); 
-    let seconds= currentdate.getSeconds()*6;
+    
+
+$(".clock__second").css(secondStart)
+$(".clock__minute").css(minuteStart)
+$(".clock__hour").css(hourStart)
+    
+console.log(minutes)
+},1000)
 
 
-        var secondStart = {'transform': 'rotate('+seconds+'deg)'};
-            
-                    
-                    $(".clock__second").css(secondStart)
-                    
-
-            
-            },1000)
-
-
-
-setInterval (function(){ 
-        
-    var currentdate = new Date(); 
-    let minutes=currentdate.getMinutes()*6;
-
-
-        var minuteStart = {'transform': 'rotate('+minutes+'deg)'};
-            
-                    
-                    $(".clock__minute").css(minuteStart)
-                    
-
-            
-            },6000)
-
-            
-
-            
-setInterval (function(){ 
-
-    var currentdate = new Date(); 
-    let hours=currentdate.getHours()*6;
-
-
-        var hourStart = {'transform': 'rotate('+hours+'deg)'};
-            
-                    
-                    $(".clock__hour").css(hourStart)
-                    
-
-            
-            },60000)            
-   
 
            
 
