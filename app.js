@@ -66,7 +66,7 @@ setInterval (function(){
 setInterval (function(){ 
 
     var currentdate = new Date(); 
-    let hours=currentdate.getHours()*30;
+    let hours=currentdate.getHours()*6;
 
 
         var hourStart = {'transform': 'rotate('+hours+'deg)'};
