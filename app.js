@@ -8,7 +8,8 @@
 var currentdate = new Date(); 
 let seconds= currentdate.getSeconds()*6;
 let minutes=currentdate.getMinutes()*6;
-let hours=(currentdate.getHours()*30)+(0.2*minutes-30);
+let hours=(currentdate.getHours()*30)+(minutes/5)-30;
+console.log(minutes)
 
 var secondStart = {'transform': 'translateX(100%)'+'rotate('+seconds+'deg)'};
 
@@ -39,11 +40,9 @@ setInterval (function(){
 
 seconds+=6
 minutes+=0.1
-hours+=0.01
+hours+=0.00833
 
-console.log(seconds)
-console.log(minutes)
-console.log(hours)
+
 
 var secondStart = {'transform': 'translateX(100%)'+'rotate('+seconds+'deg)'};
 
