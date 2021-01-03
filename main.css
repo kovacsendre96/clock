@@ -31,7 +31,7 @@ body{
 .clock__second{
     
   
-    width: 7px;
+    width: 5px;
     height: 130px;
     border-radius: 50px;
     background-color:rgba(25,80,140,.2);
@@ -47,7 +47,7 @@ body{
 
 .clock__minute{
     
-    width: 7px;
+    width: 5px;
     height: 100px;
     background-color: rgba(22, 21, 29, 0.2);
     border-radius: 50px;
@@ -60,7 +60,7 @@ body{
 
 .clock__hour{
  
-    width: 7px;
+    width: 5px;
     height: 80px;
     border-radius: 50px;
     background-color:rgba(240, 14, 14, 0.2);
@@ -70,9 +70,6 @@ body{
    
 
 }
-
-
-
 
 
 
