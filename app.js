@@ -7,7 +7,7 @@
 
 var currentdate = new Date(); 
 let seconds= currentdate.getSeconds()*6;
-let minutes=currentdate.getMinutes()*6;
+let minutes=(currentdate.getMinutes()*6)+( currentdate.getSeconds()/10)
 let hours=(currentdate.getHours()*30)+(currentdate.getMinutes())
 
 
