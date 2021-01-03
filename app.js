@@ -8,7 +8,7 @@
 var currentdate = new Date(); 
 let seconds= currentdate.getSeconds()*6;
 let minutes=currentdate.getMinutes()*6;
-let hours=(currentdate.getHours()*30)+(minutes/5)-30;
+let hours=(currentdate.getHours()*30)+(currentdate.getMinutes())
 
 
 var secondStart = {'transform': 'translateX(100%)'+'rotate('+seconds+'deg)'};
